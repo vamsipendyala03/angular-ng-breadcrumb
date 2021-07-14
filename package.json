@@ -1,6 +1,8 @@
 {
   "name": "angular-ng-breadcrumb",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A route-based Angular breadcrumb component and service. Allows breadcrumb descriptions to be set based on route data, or as the result of an API call.",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,6 +11,13 @@
     "lint": "ng lint"
   },
   "private": true,
+  "keywords": [
+    "angular",
+    "angular2",
+    "breadcrumb"
+  ],
+  "author": "Emily Taylor",
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "~11.2.14",
     "@angular/common": "~11.2.14",
@@ -23,6 +32,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1102.13",
     "@angular/cli": "~11.2.14",
     "@angular/compiler-cli": "~11.2.14",
     "@types/jasmine": "~3.6.0",
@@ -35,6 +45,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

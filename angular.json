@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-ng-breadcrumb": {
+      "projectType": "library",
+      "root": "projects/angular-ng-breadcrumb",
+      "sourceRoot": "projects/angular-ng-breadcrumb/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular-ng-breadcrumb/tsconfig.lib.json",
+            "project": "projects/angular-ng-breadcrumb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-ng-breadcrumb/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-ng-breadcrumb/src/test.ts",
+            "tsConfig": "projects/angular-ng-breadcrumb/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-ng-breadcrumb/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-ng-breadcrumb/tsconfig.lib.json",
+              "projects/angular-ng-breadcrumb/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-ng-breadcrumb"
 }
